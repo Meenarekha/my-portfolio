@@ -1143,3 +1143,56 @@ body {
     color: var(--text-muted);
     white-space: nowrap;
 }
+
+/* GitHub links for project cards */
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: fit-content;
+    padding: 9px 15px;
+    border: 1px solid var(--cyan);
+    border-radius: 8px;
+    color: var(--cyan);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .25s ease;
+}
+.project-link:hover {
+    color: var(--bg);
+    background: var(--cyan);
+    transform: translateY(-2px);
+}
+.project-link i {
+    font-size: 17px;
+}
+
+
+/* ===== UPDATED PROJECT DEMO DETAILS ===== */
+.demo-video-wrapper video {
+    background: #000;
+    object-fit: contain;
+}
+.demo-info .project-link {
+    align-self: flex-start;
+    margin-top: 6px;
+}
+.project-card .project-links {
+    margin-top: auto;
+}
+
+@media (max-width: 600px) {
+    .projects-grid,
+    .demo-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .project-card {
+        padding: 24px 20px;
+    }
+    .demo-subtitle {
+        margin-top: -18px;
+        margin-bottom: 28px;
+    }
+}
